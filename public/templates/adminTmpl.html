@@ -1,2 +1,11 @@
 <h1>Admin</h1>
-{{test}}
+<!-- {{test}} -->
+<h2>Add new product</h2>
+<form>
+	<label>Name</label><input ng-model="item.name" label="Product Name" type="text" placeholder="Product Name" /><br>
+	<label>Description</label><input ng-model="item.desc" type="text" placeholder="Description" /><br>
+	<label>Price</label><input ng-model="item.price" type="text" placeholder="Price" /><br>
+	<br>
+	<button ng-click="postData()">Add Product</button>
+
+</form>

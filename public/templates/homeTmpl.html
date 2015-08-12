@@ -1,7 +1,7 @@
 <h2>Products for People</h2>
-<div ng-repeat="thing in allStuff">
-	<h3>Item: {{thing.name}}</h3>
-	<h4>   Face: {{thing.face}}</h4>
-	<h4>   Krang: {{thing.krang}}</h4>
+<div ng-repeat="product in allStuff">
+	<h3>Product: {{product.name}}</h3>
+	<h4>   {{product.description}}</h4>
+	<h4>   Price: ${{product.price}}</h4>
 	<hr>
 </div>
