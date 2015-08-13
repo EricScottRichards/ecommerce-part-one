@@ -1,4 +1,4 @@
-var app = angular.module('eCom', ['ngRoute']);
+var app = angular.module('eCom', ['ngRoute', 'ngMaterial']);
 
 app.config(function($routeProvider){
 	$routeProvider

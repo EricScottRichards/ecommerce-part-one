@@ -9,9 +9,9 @@ app.controller('adminCtrl', function($scope, mainSrvc){
 
 	// getStuff();
 
-	$scope.allStuff = mainSrvc.getStuff();
+	$scope.allStuff   = mainSrvc.getStuff();
 
-	$scope.postData = function(){
+	$scope.postData   = function(){
 		console.log($scope.item);
 		mainSrvc.postData($scope.item)
 	}

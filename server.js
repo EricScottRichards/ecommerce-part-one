@@ -5,6 +5,7 @@ var cors       = require('cors');
 var bcrypt     = require('bcrypt');
 
 var ProductCtrl = require('./controllers/ProductCtrl');
+var OrderCtrl   = require('./controllers/OrderCtrl');
 
 var app = express();
 
@@ -30,7 +31,12 @@ mongoose.connect(mongoUri, function(err){
 	})
 })
 
-app.post('/api/eCommerceThing', ProductCtrl.create);
-app.get('/api/eCommerceThing', ProductCtrl.read);
-app.put('/api/eCommerceThing/:id', ProductCtrl.update);
-app.delete('/api/eCommerceThing/:id', ProductCtrl.delete);
+app.post('/api/product'   , ProductCtrl.create);
+app.get('/api/product'    , ProductCtrl.read);
+app.put('/api/product'    , ProductCtrl.update);
+app.delete('/api/product' , ProductCtrl.delete);
+
+app.post('/api/order', ProductCtrl.create);
+app.get('/api/order', ProductCtrl.read);
+app.put('/api/order', ProductCtrl.update);
+app.delete('/api/order', ProductCtrl.delete);

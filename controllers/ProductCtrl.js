@@ -1,4 +1,4 @@
-var Product = require('../models/Product');
+var Product = require('../models/Product.js');
 
 module.exports = {
 	create: function(req, res){
@@ -25,7 +25,8 @@ module.exports = {
 		});
 	},
 	update: function(req, res){
-		Product.findByIdAndUpdate(req.params.id, function(err, result){
+		console.log(req.body)
+		Product.update(req.query, req.body, function(err, result){
 			if(err){
 				console.log(error);
 				return res(500).send(err);
@@ -35,7 +36,7 @@ module.exports = {
 		});
 	},
 	delete: function(req, res){
-		Product.findByIdAndRemove(req.params.id, function(err, result){
+		Product.remove(req.query, function(err, result){
 			if(err){
 				console.log(error);
 				return res.status(500).send(err);
